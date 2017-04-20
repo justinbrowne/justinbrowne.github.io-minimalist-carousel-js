@@ -182,11 +182,3 @@
 
 
 
-.prevent-clicks {
-  pointer-events: none;
-  cursor: default;
-}
-
-
-
-
