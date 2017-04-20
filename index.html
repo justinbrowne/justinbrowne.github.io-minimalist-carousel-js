@@ -11,7 +11,7 @@
 <body>
   <div class="container">
 
-    <ol class="image-wrapper" id="slides">
+    <ol class="image-wrapper--ol" id="slides">
 
       <img class="evo_c-minimalist-carousel__img evo_c-minimalist-carousel__img--showing"
       src="http://wfiles.brothersoft.com/s/santorini-greece_96679-1024x768.jpg" alt="Image One">
@@ -34,9 +34,12 @@
       <button class="controls previous-button" id="previous">
       <img class="back-arrow" src="arrow-left.png">
       </button>
-      
+
       <button class="controls next-button" id="next">
+      <span id="image-number"></span>
       <img class="forward-arrow" src="arrow-right.png" alt="Right Arrow">
+      <div class="firstlines"></div>
+      <div class="secondlines"></div>
       </button>
       </div>
 
