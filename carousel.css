@@ -1,0 +1,244 @@
+
+.evo_c-minimalist-carousel__img {
+  position: absolute;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    z-index: 1;
+
+  -webkit-transition: opacity .5s ease-in-out;
+  -moz-transition: opacity .5s ease-in-out;
+  -o-transition: opacity .5s ease-in-out;
+  transition: opacity .5s ease-in-out;
+}
+
+.evo_c-minimalist-carousel__img--showing {
+    opacity: 1;
+    z-index: 2;
+}
+
+
+.container {
+    position: relative;
+    height: 400px;
+    width: 30%;
+    padding: 0px;
+    margin: 0px;
+    list-style-type: none;
+    font-family: 'Roboto', sans-serif; 
+}
+
+
+.number {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  filter: alpha(opacity=50);
+  opacity: 0.50; 
+}
+
+.next-button {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  filter: alpha(opacity=50);
+  opacity: 0.50;    
+}
+
+.previous-button{
+  position: absolute;
+  top: 40px;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  border: none;
+  background-color: transparent;
+  filter: alpha(opacity=55);
+  opacity: 0.55;  
+}
+
+.container{
+  position: relative;
+}
+
+.controls:hover {
+  cursor: pointer;
+}
+
+.buttons{
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  right: 0px;
+  z-index: 10;
+  font-size: 0px;
+}
+
+#previous {
+  visibility: hidden;
+}
+
+
+.back-arrow {
+  text-align: center;
+  width: 25px;
+  height: 25px;
+  filter: alpha(opacity=60);
+  opacity: 0.60;   
+}
+
+
+.forward-arrow {
+  position: absolute;
+  right: 2px;
+  top: 4px;
+  width: 15px;
+  height: 15px;
+  background-color: transparent;
+  filter: alpha(opacity=90);
+  opacity: 0.90;   
+}
+
+.firstlines {
+  position: absolute;
+  right: 7px;
+  top: 6.5px;
+  width: 45px;
+  height: 40px;
+  border-left: 1px solid rgba(255, 255, 255, .25);
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+  z-index: 1;
+}
+
+.secondlines {
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  width: 45px;
+  height: 40px;
+  border-left: 1px solid rgba(255, 255, 255, .25);
+  border-bottom: 1px solid rgba(255, 255, 255, .25);
+}
+
+
+
+.prevent-clicks {
+  pointer-events: none;
+  cursor: default;
+}
+
+
+
+
+
+/*******
+
+
+.evo_c-minimalist-carousel__img--one {
+  opacity: 0;
+}
+
+
+
+#evo_c-minimalist-carousel__input--one:checked ~ .evo_c-minimalist-carousel__img--one,
+#evo_c-minimalist-carousel__input--two:checked ~ .evo_c-minimalist-carousel__img--two,
+#evo_c-minimalist-carousel__input--three:checked ~ .evo_c-minimalist-carousel__img--three,
+#evo_c-minimalist-carousel__input--four:checked ~ .evo_c-minimalist-carousel__img--four,
+#evo_c-minimalist-carousel__input--five:checked ~ .evo_c-minimalist-carousel__img--five {
+  opacity: 1;
+}
+
+#evo_c-minimalist-carousel__input--one:checked ~ .oneLabel,
+#evo_c-minimalist-carousel__input--one:checked ~ .threeLabel,
+#evo_c-minimalist-carousel__input--one:checked ~ .fourLabel,
+#evo_c-minimalist-carousel__input--one:checked ~ .fiveLabel {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--two:checked ~ .twoLabel,
+#evo_c-minimalist-carousel__input--two:checked ~ .oneLabel,
+#evo_c-minimalist-carousel__input--two:checked ~ .fourLabel,
+#evo_c-minimalist-carousel__input--two:checked ~ .fiveLabel {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--three:checked ~ .threeLabel,
+#evo_c-minimalist-carousel__input--three:checked ~ .twoLabel,
+#evo_c-minimalist-carousel__input--three:checked ~ .oneLabel,
+#evo_c-minimalist-carousel__input--three:checked ~ .fiveLabel {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--four:checked ~ .fourLabel,
+#evo_c-minimalist-carousel__input--four:checked ~ .twoLabel,
+#evo_c-minimalist-carousel__input--four:checked ~ .threeLabel,
+#evo_c-minimalist-carousel__input--four:checked ~ .oneLabel,
+#evo_c-minimalist-carousel__input--four:checked ~ .fiveLabel {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--five:checked ~ .fourLabel,
+#evo_c-minimalist-carousel__input--five:checked ~ .twoLabel,
+#evo_c-minimalist-carousel__input--five:checked ~ .threeLabel,
+#evo_c-minimalist-carousel__input--five:checked ~ .fiveLabel {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--three:checked ~ .back-arrow-two,
+#evo_c-minimalist-carousel__input--three:checked ~ .back-arrow-one,
+#evo_c-minimalist-carousel__input--three:checked ~ .back-arrow-four {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--four:checked ~ .back-arrow-two,
+#evo_c-minimalist-carousel__input--four:checked ~ .back-arrow-one,
+#evo_c-minimalist-carousel__input--four:checked ~ .back-arrow-three {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--two:checked ~ .back-arrow-three,
+#evo_c-minimalist-carousel__input--two:checked ~ .back-arrow-one,
+#evo_c-minimalist-carousel__input--two:checked ~ .back-arrow-four {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--one:checked ~ .back-arrow-two,
+#evo_c-minimalist-carousel__input--one:checked ~ .back-arrow-three,
+#evo_c-minimalist-carousel__input--one:checked ~ .back-arrow-four {
+  visibility: hidden;
+}
+
+#evo_c-minimalist-carousel__input--five:checked ~ .back-arrow-one,
+#evo_c-minimalist-carousel__input--five:checked ~ .back-arrow-two,
+#evo_c-minimalist-carousel__input--five:checked ~ .back-arrow-three,
+#evo_c-minimalist-carousel__input--five:checked ~ .back-arrow-four {
+  visibility: hidden;
+}
+
+
+.gradient-background {
+    background-color: rgba(255, 255, 255, .65); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top right, transparent, rgba(255, 255, 255, .65)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, transparent, rgba(255, 255, 255, .65)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, transparent, rgba(255, 255, 255, .65)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(top right, transparent, rgba(255, 255, 255, .65)); /* Standard syntax */
+}
+
+.gradient-back-button {
+    background-color: rgba(255, 255, 255, .45); /* For browsers that do not support gradients */
+    background: -webkit-linear-gradient(top right, transparent, rgba(255, 255, 255, .45)); /* For Safari 5.1 to 6.0 */
+    background: -o-linear-gradient(top right, transparent, rgba(255, 255, 255, .45)); /* For Opera 11.1 to 12.0 */
+    background: -moz-linear-gradient(top right, transparent, rgba(255, 255, 255, .45)); /* For Firefox 3.6 to 15 */
+    background: linear-gradient(top right, transparent, rgba(255, 255, 255, .45)); /* Standard syntax */
+}
+
