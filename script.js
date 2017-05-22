@@ -1,6 +1,6 @@
-var slides = document.querySelectorAll('#slides .evo_c-minimalist-carousel__img');
+var slides = document.querySelectorAll('#evo_c-minimalist__img--slides .evo_c-minimalist-carousel__img');
 var currentSlide = 0;
-var imageNumber = document.getElementById("image-number");
+var imageNumber = document.getElementById("evo_c-minimalist__img--number");
 imageNumber.innerHTML = 1;
 
 
@@ -19,8 +19,8 @@ function goToSlide(n) {
     slides[currentSlide].className = 'evo_c-minimalist-carousel__img evo_c-minimalist-carousel__img--showing';
 }
 
-var next = document.getElementById('next');
-var previous = document.getElementById('previous');
+var next = document.getElementById('evo_c-minimalist__buttons--next');
+var previous = document.getElementById('evo_c-minimalist__buttons--previous');
 
 next.onclick = function() {
     nextSlide();
