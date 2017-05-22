@@ -1,73 +1,199 @@
-var slides = document.querySelectorAll('#evo_c-minimalist__img--slides .evo_c-minimalist-carousel__img');
-var currentSlide = 0;
-var imageNumber = document.getElementById("evo_c-minimalist__img--number");
-imageNumber.innerHTML = 1;
 
+.evo_c-minimalist-carousel__container
+{
+    position: relative;
 
-function nextSlide() {
-    goToSlide(currentSlide+1);
+    min-width: 350px;
+    max-width: 50%;
+    height: 400px;
+    margin: 0 auto;
+    padding: 0;
+
+    list-style-type: none;
 }
 
-function previousSlide() {
-    goToSlide(currentSlide-1);
+
+
+.evo_c-minimalist-carousel__image-container
+{
+    margin: 0;
 }
 
 
-function goToSlide(n) {
-    slides[currentSlide].className = 'evo_c-minimalist-carousel__img';
-    currentSlide = (n+slides.length)%slides.length;
-    slides[currentSlide].className = 'evo_c-minimalist-carousel__img evo_c-minimalist-carousel__img--showing';
+.evo_c-minimalist-carousel__img
+{
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: auto;
+
+    -webkit-transition: opacity .5s ease-in-out;
+       -moz-transition: opacity .5s ease-in-out;
+         -o-transition: opacity .5s ease-in-out;
+            transition: opacity .5s ease-in-out;
+
+    opacity: 0;
 }
 
-var next = document.getElementById('evo_c-minimalist__buttons--next');
-var previous = document.getElementById('evo_c-minimalist__buttons--previous');
 
-next.onclick = function() {
-    nextSlide();
-    if(currentSlide == 0)
-      imageNumber.innerHTML = 1;
-    if(currentSlide == 1) {
-      imageNumber.innerHTML = 2;
-    }
-    if(currentSlide == 2) {
-      imageNumber.innerHTML = 3;
-    }
-    if(currentSlide == 3) {
-      imageNumber.innerHTML = 4;
-    }
-    if(currentSlide == 4) {
-      imageNumber.innerHTML = 5;
-    }
-    if(currentSlide >= 4) {
-    next.style.visibility = "hidden";
-    }
-    else if(currentSlide > 0) {
-    previous.style.visibility = "initial";
+
+.evo_c-minimalist-carousel__buttons
+{
+    font-size: 5px;
+
+    position: absolute;
+    z-index: 10;
+    right: 0;
+
 }
-};
 
-previous.onclick = function() {
-    previousSlide();
-    if(currentSlide == 0)
-      imageNumber.innerHTML = 1;
-    if(currentSlide == 1) {
-      imageNumber.innerHTML = 2;
-    }
-    if(currentSlide == 2) {
-      imageNumber.innerHTML = 3;
-    }
-    if(currentSlide == 3) {
-      imageNumber.innerHTML = 4;
-    }
-    if(currentSlide == 4) {
-      imageNumber.innerHTML = 5;
-    }
 
-    if(currentSlide == 0 ) {
-    previous.style.visibility = "hidden";
-    }
-    else if(currentSlide < 4) {
-    next.style.visibility = "initial";
+
+.evo_c-minimalist-carousel__img--showing
+{
+    z-index: 2;
+
+    opacity: 1;
 }
-};
 
+
+#evo_c-minimalist__img--number
+{
+    font-family: 'Roboto', sans-serif;
+    font-size: 3em;
+
+    position: absolute;
+    z-index: 10;
+    top: 5px;
+    right: 0;
+
+    width: 50px;
+    height: 45px;
+
+    text-align: center;
+
+    color: rgba(255,255,255,.8);
+}
+
+
+
+.evo_c-minimalist-carousel__buttons--previous-button
+{
+    position: absolute;
+    top: 50px;
+    right: 0;
+
+    width: 50px;
+    height: 25px;
+
+    border: none;
+    outline: none;
+    background: -webkit-linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* For Safari 5.1 to 6.0 */
+    background:      -o-linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* For Opera 11.1 to 12.0 */
+    background:    -moz-linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* For Firefox 3.6 to 15 */
+    background:         linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* Standard syntax */
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, .20);
+    /* For browsers that do not support gradients */
+
+    filter: alpha(opacity=50);
+}
+
+
+.evo_c-minimalist-carousel__buttons--next-button
+{
+    font-size: 2em;
+
+    position: absolute;
+    top: 0;
+    right: 0;
+
+    width: 50px;
+    height: 45px;
+    padding: 5px;
+
+    text-align: center;
+
+    border: none;
+    outline: none;
+    background: -webkit-linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* For Safari 5.1 to 6.0 */
+    background:      -o-linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* For Opera 11.1 to 12.0 */
+    background:    -moz-linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* For Firefox 3.6 to 15 */
+    background:         linear-gradient(top right, transparent, rgba(255, 255, 255, .50));
+    /* Standard syntax */
+    background-color: transparent;
+    background-color: rgba(255, 255, 255, .20);
+    /* For browsers that do not support gradients */
+
+    filter: alpha(opacity=50);
+}
+
+
+.evo_c-minimalist-carousel__buttons--controls:hover
+{
+    cursor: pointer;
+}
+
+
+#evo_c-minimalist-previous
+{
+    visibility: hidden;
+}
+
+.evo_c-minimalist-carousel__back-arrow
+{
+    width: 25px;
+    height: 25px;
+
+    text-align: center;
+}
+
+.evo_c-minimalist-carousel__forward-arrow
+{
+    position: absolute;
+    top: 4px;
+    right: 2px;
+
+    width: 15px;
+    height: 15px;
+
+    background-color: transparent;
+}
+
+
+.evo_c-minimalist-carousel__first-lines
+{
+    position: absolute;
+    z-index: 1;
+    top: 6.5px;
+    right: 7px;
+
+    width: 45px;
+    height: 40px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    border-left: 1px solid rgba(255, 255, 255, .25);
+}
+
+.evo_c-minimalist-carousel__second-lines
+{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+
+    width: 45px;
+    height: 40px;
+
+    border-bottom: 1px solid rgba(255, 255, 255, .25);
+    border-left: 1px solid rgba(255, 255, 255, .25);
+}
