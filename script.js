@@ -1,7 +1,7 @@
-var slides = document.querySelectorAll('#evo_c-minimalist__img--slides .evo_c-minimalist-carousel__img');
+var slides = document.querySelectorAll('.evo_c-minimalist__img--slides, .evo_c-minimalist-carousel__img');
 var currentSlide = 0;
-var imageNumber = document.getElementById("evo_c-minimalist__img--number");
-imageNumber.innerHTML = 1;
+var imageNumber = document.getElementsByClassName("evo_c-minimalist__img--number");
+imageNumber[0].innerHTML = 1;
 
 
 function nextSlide() {
@@ -25,47 +25,49 @@ var previous = document.getElementById('evo_c-minimalist__buttons--previous');
 next.onclick = function() {
     nextSlide();
     if(currentSlide == 0)
-      imageNumber.innerHTML = 1;
+      imageNumber[0].innerHTML = 1;
     if(currentSlide == 1) {
-      imageNumber.innerHTML = 2;
+      imageNumber[0].innerHTML = 2;
     }
     if(currentSlide == 2) {
-      imageNumber.innerHTML = 3;
+      imageNumber[0].innerHTML = 3;
     }
     if(currentSlide == 3) {
-      imageNumber.innerHTML = 4;
+      imageNumber[0].innerHTML = 4;
     }
     if(currentSlide == 4) {
-      imageNumber.innerHTML = 5;
+      imageNumber[0].innerHTML = 5;
     }
     if(currentSlide >= 4) {
     next.style.visibility = "hidden";
     }
-    else if(currentSlide > 0) {
+    else if(currentSlide >= 0) {
     previous.style.visibility = "initial";
 }
 };
 
 previous.onclick = function() {
     previousSlide();
+
     if(currentSlide == 0)
-      imageNumber.innerHTML = 1;
+      imageNumber[0].innerHTML = 1;
     if(currentSlide == 1) {
-      imageNumber.innerHTML = 2;
+      imageNumber[0].innerHTML = 2;
     }
     if(currentSlide == 2) {
-      imageNumber.innerHTML = 3;
+      imageNumber[0].innerHTML = 3;
     }
     if(currentSlide == 3) {
-      imageNumber.innerHTML = 4;
+      imageNumber[0].innerHTML = 4;
     }
     if(currentSlide == 4) {
-      imageNumber.innerHTML = 5;
+      imageNumber[0].innerHTML = 5;
     }
 
     if(currentSlide == 0 ) {
     previous.style.visibility = "hidden";
     }
+
     else if(currentSlide < 4) {
     next.style.visibility = "initial";
 }
