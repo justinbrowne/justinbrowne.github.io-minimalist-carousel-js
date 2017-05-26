@@ -60,7 +60,7 @@
 }
 
 
-#evo_c-minimalist__img--number
+.evo_c-minimalist__img--number
 {
     font-family: 'Roboto', sans-serif;
     font-size: 3em;
@@ -144,18 +144,15 @@
     cursor: pointer;
 }
 
-
-#evo_c-minimalist-previous
+#evo_c-minimalist__buttons--previous
 {
     visibility: hidden;
 }
 
 .evo_c-minimalist-carousel__back-arrow
 {
-    width: 25px;
-    height: 25px;
-
     text-align: center;
+    color: rgba(255, 255, 255, 0.8);
 }
 
 .evo_c-minimalist-carousel__forward-arrow
@@ -167,6 +164,7 @@
     width: 15px;
     height: 15px;
 
+    color: rgba(255, 255, 255, 0.65);
     background-color: transparent;
 }
 
