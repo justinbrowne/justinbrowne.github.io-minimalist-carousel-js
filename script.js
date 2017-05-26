@@ -1,3 +1,5 @@
+(function(){
+
 var slides = document.querySelectorAll('.evo_c-minimalist__img--slides .evo_c-minimalist-carousel__img');
 var currentSlide = 0;
 var imageNumber = document.getElementsByClassName("evo_c-minimalist__img--number");
@@ -73,3 +75,4 @@ previous.onclick = function() {
 }
 };
 
+}());
